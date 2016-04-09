@@ -24,7 +24,12 @@
 -include device/samsung/fortuna-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := fortunave3g,SM-G530H
+TARGET_OTA_ASSERT_DEVICE := fortunave3g
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogen_fortunave3g_defconfig
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/fortunave3g/init/init_fortunave3g.c
+TARGET_UNIFIED_DEVICE := true
